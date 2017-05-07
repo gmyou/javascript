@@ -33,5 +33,10 @@ console.log( fruits );
 var pos = fruits.indexOf("바나나");
 console.log( pos );
 
-var removedItem = fruits.splice(pos, 1);
+// var removedItem = fruits.splice(pos, 1);
+var removedItem = fruits.splice(pos, 2);
+console.log( fruits );
+
+var shallowCopy = fruits.slice();
+console.log( shallowCopy );
 console.log( fruits );
