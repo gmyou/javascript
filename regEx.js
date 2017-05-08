@@ -21,3 +21,15 @@ console.log(res);
 res = s.match(/yes[^]*day/);
 // Returns ["yes\nmake my day"]
 console.log(res);
+
+var str = '#foo#';
+var regex = /foo/y;
+
+regex.lastIndex = 1;
+var stickyFlag = regex.test(str); // true
+console.log(stickyFlag);
+regex.lastIndex = 5;
+stickyFlag = regex.test(str); // false (lastIndex is taken into account with sticky flag)
+console.log(stickyFlag);
+stickyFlag = regex.lastIndex; // 0 (reset after match failure)
+console.log(stickyFlag);
