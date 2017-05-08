@@ -13,3 +13,11 @@ And yet
 This is the end`;
 var lines = text.split(/\r\n|\r|\n/);
 console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+
+var s = 'Please yes\nmake my day!';
+var res = s.match(/yes.*day/);
+// Returns null
+console.log(res);
+res = s.match(/yes[^]*day/);
+// Returns ["yes\nmake my day"]
+console.log(res);
