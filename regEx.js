@@ -34,6 +34,7 @@ console.log(stickyFlag);
 stickyFlag = regex.lastIndex; // 0 (reset after match failure)
 console.log(stickyFlag);
 
+
 var text = 'Образец text на русском языке';
 var regex = /[\u0400-\u04FF]+/g;
 
@@ -46,3 +47,7 @@ console.log(match2[0]);       // logs 'на' [did not log 'text']
 console.log(regex.lastIndex); // logs '15'
 
 // and so on
+
+
+var url = 'http://xxx.domain.com';
+console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
