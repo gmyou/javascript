@@ -1,6 +1,8 @@
 var obj = {};
-Object.defineProperty(obj, "naver", {
-    value: 60, 
-    enumerable: false
+Object.defineProperty(obj, "item", {
+    set: function(param) {
+        this.sport = param;
+    }
 });
-console.log(obj.naver);
+obj.item = "야구";
+console.log(obj.sport);
