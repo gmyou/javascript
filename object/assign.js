@@ -13,3 +13,7 @@ try {
 } catch (e) {
     console.log("파라미터 모두 문자열 사용 불가");
 }
+
+let oneObj = {};
+Object.assign(oneObj, "ABC", undefined, null);
+console.log(oneObj);
