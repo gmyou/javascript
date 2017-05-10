@@ -17,3 +17,7 @@ try {
 let oneObj = {};
 Object.assign(oneObj, "ABC", undefined, null);
 console.log(oneObj);
+
+let twoObj = {};
+Object.assign(twoObj, "ABC", {key1: undefined, key2: null});
+console.log(twoObj);
