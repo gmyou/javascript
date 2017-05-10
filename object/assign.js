@@ -21,3 +21,18 @@ console.log(oneObj);
 let twoObj = {};
 Object.assign(twoObj, "ABC", {key1: undefined, key2: null});
 console.log(twoObj);
+
+let sports = {
+    event: "축구",
+    player: 11
+};
+let dup = Object.assign({}, sports);
+console.log(dup.player);
+
+sports.event = '수영';
+console.log(dup.event);
+console.log(sports.event);
+
+dup.player = 33;
+console.log(dup.player);
+console.log(sports.player);
