@@ -41,3 +41,18 @@ g.addVertex(1);
 console.log(g.vertexes);
 g.addVertex(2);
 console.log(g.vertexes);
+
+
+var a = {a: 1}; 
+// a ---> Object.prototype ---> null
+
+var b = Object.create(a);
+// b ---> a ---> Object.prototype ---> null
+console.log(b.a); // 1 (상속됨)
+
+var c = Object.create(b);
+// c ---> b ---> a ---> Object.prototype ---> null
+
+var d = Object.create(null);
+// d ---> null
+console.log(d.hasOwnProperty); // undefined이다. 왜냐하면 d는 Object.prototype을 상속받지 않기 때문이다
